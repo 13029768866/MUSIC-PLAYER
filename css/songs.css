@@ -9,7 +9,12 @@
 *::after {
     box-sizing: border-box;
 }
-
+/* 旋转动画 */
+@keyframes picture_rotate 
+{
+    0%{transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
 .page {
     display: flex;
     flex-direction: column;
@@ -17,11 +22,32 @@
     background: transparent url(http://p3.music.126.net/z4p2xss2a50qNHe6TLFdoA==/2425522650910827.jpg) no-repeat center;
     background-size: cover;
 }
-
-.song_picture_container {
+.song_picture_container{
     position: relative;
 }
-.song_picture_container{
+.song_picture_container .pointer{
+    position: absolute;
+    width: 24vw;
+    left: 45vw;
+}
+.song_picture_container .song_picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18vw ;
+}
+.song_picture_container .ring{
+    width: 72vw;
     
 }
-.page>.links {}
+.song_picture_container .light{
+    width: 72vw;
+    position: absolute;
+    
+}
+.song_picture_container .cover{
+    width: 44.5vw;
+    position: absolute;
+    border-radius: 50%; 
+    animation: picture_rotate 20s  infinite  linear;
+}
