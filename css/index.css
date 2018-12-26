@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @13029768866 Sign out
-0
-5 5 FrankFang/163-music-2018
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-163-music-2018/src/css/song.css
-06b114e  on 25 Feb
-@FrankFang FrankFang 播放时动画
-     
-86 lines (79 sloc)  2.13 KB
 *{margin:0; padding: 0; box-sizing: border-box;}
 *::before, *::after{box-sizing: border-box; }
 
@@ -100,16 +83,3 @@ Explore
 	background: #D43B32;
 	color: white;
 }	
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
