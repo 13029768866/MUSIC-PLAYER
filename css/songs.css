@@ -51,3 +51,50 @@
     border-radius: 50%; 
     animation: picture_rotate 20s  infinite  linear;
 }
+/* 歌词区域 */
+.lyric-description{
+    flex-grow: 1;
+    color: #AEABAC;
+    text-align: center;
+    line-height: 2;
+    margin-top: 20px;
+}
+.lyric-description h1{
+    color: #fff;
+    font-size: 18px;
+}
+.lyric{
+    height: 72px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+.lyric p{
+    line-height: 24px;
+    font-size: 14px;
+}
+.lyric p:active{
+    color: #fff;
+}
+
+/* 按钮区域 */
+.links{
+    display: flex;
+    justify-content: center;
+}
+.links a {
+    display: inline-block;
+    width: 45vw;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    letter-spacing: 1vw;
+    margin: 2.5vw;
+    padding: 0 6px;
+    border: 1px solid #adadad;
+    color:#fff;
+    background-color: #d33a31;
+    border-radius: 10.5vw;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
