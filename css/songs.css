@@ -9,6 +9,15 @@
 *::after {
     box-sizing: border-box;
 }
+
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+
 /* 旋转动画 */
 @keyframes picture_rotate 
 {
@@ -19,7 +28,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: transparent url(http://p3.music.126.net/z4p2xss2a50qNHe6TLFdoA==/2425522650910827.jpg) no-repeat center;
+    background: transparent url(https://p4.music.126.net/J42rJTPyjRPp6-mdOSZQHw==/109951163624379798.jpg) no-repeat center;
     background-size: cover;
 }
 .song_picture_container{
@@ -37,19 +46,36 @@
     margin-top: 18vw ;
 }
 .song_picture_container .ring{
-    width: 72vw;
+    width: 79vw;
     
 }
 .song_picture_container .light{
-    width: 72vw;
+    width: 79vw;
     position: absolute;
-    
+    /* animation: picture_rotate 20s  infinite  linear; */
 }
 .song_picture_container .cover{
-    width: 44.5vw;
+    width: 50vw;
     position: absolute;
-    border-radius: 50%; 
+    border-radius: 50%;    
+    /* animation: picture_rotate 20s  infinite  linear; */
+
+}
+.song_picture_container.playing .light,
+.song_picture_container.playing .cover{
     animation: picture_rotate 20s  infinite  linear;
+}
+
+/* 播放按钮 */
+.playBtn{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    z-index: 2;
 }
 /* 歌词区域 */
 .lyric-description{
@@ -70,7 +96,7 @@
 }
 .lyric p{
     line-height: 24px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .lyric p:active{
     color: #fff;
@@ -90,11 +116,15 @@
     letter-spacing: 1vw;
     margin: 2.5vw;
     padding: 0 6px;
-    border: 1px solid #adadad;
-    color:#fff;
-    background-color: #d33a31;
+    border: 1px solid #d33a31;
+    color:#d33a31;
+    background-color: transparent;
     border-radius: 10.5vw;
     font-size: 18px;
     text-align: center;
     box-sizing: border-box;
+}
+.links a.main{
+    color: #fff;
+    background-color: #d33a31;
 }
