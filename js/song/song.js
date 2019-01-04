@@ -1,5 +1,5 @@
 $(function() {
-  $.get("MUSIC-PLAYER/lyric.json").then(function(response) {
+  $.get("/lyric.json").then(function(response) {
     let { lyric } = response;
     let lyricArray = lyric.split('↵')
     let regex = /^\[(.+)\](.*)$/;
