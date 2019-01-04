@@ -52,18 +52,22 @@
 .song_picture_container .light{
     width: 79vw;
     position: absolute;
-    /* animation: picture_rotate 20s  infinite  linear; */
 }
 .song_picture_container .cover{
     width: 50vw;
     position: absolute;
     border-radius: 50%;    
-    /* animation: picture_rotate 20s  infinite  linear; */
-
 }
 .song_picture_container.playing .light,
 .song_picture_container.playing .cover{
     animation: picture_rotate 20s  infinite  linear;
+    animation-play-state: running;
+	-webkit-animation-play-state: running;
+}
+/* 动画暂停 */
+.animation_pause{
+    animation-play-state:paused!important;
+    -webkit-animation-play-state:paused!important;
 }
 
 /* 播放按钮 */

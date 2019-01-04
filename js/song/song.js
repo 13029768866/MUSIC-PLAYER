@@ -20,20 +20,30 @@ $(function() {
     })
 });
 let audio = document.createElement('audio')
-let status = true;
+let status = true
 audio.src = "http://dl.stream.qqmusic.qq.com/C400003lIzTG3HmKk6.m4a?guid=9408987631&vkey=323808D047AED833F7E8026585808A932A784774B063E94D497029C7058943EF11C8ED813ECE184F4753B499EE5E66A99956B75328E03B26&uin=0&fromtag=38"
 
+audio.oncanplay =()=>{
+    music_play()
+}
+function music_play(){
+    $('#music_play').hide()
+    $('.song_picture_container').addClass('playing')
+    audio.play()
+    status = !status
+}
+function music_pause(){
+    audio.pause()
+    status = !status
+    $('#music_play').show()
+}
 $('.song_picture_container').on('click',()=>{
+    $('.song_picture_container.playing .light').toggleClass('animation_pause')
+    $('.song_picture_container.playing .cover').toggleClass('animation_pause')
     if(status){
-        $('#music_play').hide();
-        $('.song_picture_container').addClass('playing')
-        audio.play()
-        status = !status
+        music_play()
     }else{
-        audio.pause()
-        status = !status;
-        $('#music_play').show();
-        $('.song_picture_container').removeClass('playing')
+        music_pause()
     }
     
 })
